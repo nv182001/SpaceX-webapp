@@ -1,0 +1,16 @@
+.modal__info{
+    margin-top: -35px;
+    display: flex;
+    justify-content: space-around;
+}
+.info__column {
+    color: black;
+    font-weight: bold;
+}
+.info__column h2{
+    font-size: 14px;
+}
+.info__column p{
+    font-size: 10px;
+    color: rgb(102, 20, 20);
+}

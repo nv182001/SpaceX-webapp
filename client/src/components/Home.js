@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios"
+import Card from "./Card"
 
+import {Fragment} from 'react'
 const Home = () => {
     // const [mission, setMission] = useState([])
     const [rockets, setRockets] = useState([])
@@ -13,23 +15,20 @@ const Home = () => {
     useEffect(() => {
         getData()
     }, [])
-    return (
-        <div className="container">
+    return (<div className="home">
+        <h1 className="container__header">SpaceX Rockets 🚀</h1>
 
-            {rockets.map((e) => (
-                <div className="card" key={e.id} >
-                    <h3 className="card__header" >{e.rocket_name}</h3>
-                    <div className="card__photo">
-                        <img src={e.flickr_images} alt="" className="pic" />
-                    </div>
-                    <h3 className="card__header"  >Country :{e.country}</h3>
-                    <p className="card__content">{e.description}</p>
-                    <a href={e.wikipedia}>Read more..</a>
-                </div>
+        <div className="container">
+            {rockets.map((e,) => (
+                <Fragment>
+
+                    <Card e={e} key={e.id} />
+                </Fragment>
             ))}
 
-
         </div>
+
+    </div>
     )
 }
 
