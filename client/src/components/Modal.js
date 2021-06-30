@@ -2,45 +2,44 @@ import {useState} from "react"
 import Modal from "react-modal"
 import Carousel1 from "./Carousel"
 
-// Modal.setAppElement('#root')
+Modal.setAppElement('#root')
 const Modal1 = ({e}) => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
     function openModal() {
         setModalIsOpen(true);
     }
-
     function closeModal() {
         setModalIsOpen(false);
     }
-
-
     return (
-        <div>
-            <button onClick={openModal} style={{textAlign: 'center', margin: 'auto', display: 'block', marginBottom: 10}}>View More...</button>
+        <div className="modal">
+            <button onClick={openModal} className="btn">View More...</button>
             <Modal key={e.id}
                 isOpen={modalIsOpen}
                 // onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
-
-                contentLabel="Example Modal"
+                // contentLabel="Example Modal"
                 ShouldCloseOnOverClick={false}
                 style={
                     {
-                        overlay: {backgroundColor: 'gray'}
+                        overlay: {backgroundColor: 'gray'},
                     }, {
-
                         content: {
+                            display: 'flex',
+                            flexWrap: "wrap",
                             margin: 'auto',
-                            width: 400,
-                            height: 550,
-                            color: 'orange',overflow:'hidden'
+                            width: 340,
+                            // height: 530,
+                            maxHeight: 560,
+                            color: 'orange', overflow: 'hidden',
+                            alignItems: "center", justifyContent: "center"
 
                         }
                     }
                 }
             >
-                <h3 className="card__header" >{e.rocket_name}</h3>
+                <h3 className="modal__header" >{e.rocket_name}</h3>
                 <hr />
 
                 <div className="card__photo">
@@ -61,15 +60,15 @@ const Modal1 = ({e}) => {
                     </div>
                     <div className="info__column">
                         <h2>Active</h2>
-                        <p >{e.active?'Yes':'No'} </p>
+                        <p >{e.active ? 'Yes' : 'No'} </p>
                         <h2>Cost/Launch</h2>
-                        <p >${e.cost_per_launch/1000000} Million </p>
+                        <p >${e.cost_per_launch / 1000000} Million </p>
                     </div>
-                   
+
                 </div>
 
 
-                <button onClick={closeModal}>close</button>
+                <button onClick={closeModal} className="close__btn">close</button>
 
 
             </Modal>

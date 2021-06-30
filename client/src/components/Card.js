@@ -10,8 +10,6 @@ const Card = ({e}) => {
             </div>
             <h3 className="card__header"  >Country :{e.country}</h3>
             <p className="card__content">{e.description}</p>
-            {/* <a href="#" id={`popup${e.id}`}>
-                View more..</a> */}
             <Modal1 id={e.id} e={e} />
         </div>
 

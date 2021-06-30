@@ -1,0 +1,40 @@
+.select {
+  margin: 0 auto;
+  font-weight: bold;
+  position: relative;
+  border-radius: 0.7rem;
+  background-color: rgba(102, 131, 145, 0.8);
+  outline: none;
+  direction: none;
+  display: block;
+  font-weight: 600;
+  padding: 1rem 2rem;
+
+  cursor: pointer;
+  color: rgb(245, 238, 238);
+  margin-bottom: 6rem;
+} 
+
+.select:focus,
+  .select:hover {
+    outline: none;background-color: rgb(187, 184, 184);
+    border: 1px solid rgb(148, 146, 146);color: black;
+  }
+  .select option {
+    margin: 8rem;
+    /* color: rgb(122, 85, 38); */
+  } 
+
+
+
+@media screen and (max-width: 768px) {
+  select {
+    font-size: 1rem;
+    width: 11rem;
+    /* padding: 1rem 3rem; */
+  }
+  .select{
+    padding: 0.3rem 0.7rem;
+
+  }
+}

@@ -1,16 +1,54 @@
 .modal__info{
-    margin-top: -35px;
+    margin-top: -32px;
     display: flex;
     justify-content: space-around;
 }
 .info__column {
     color: black;
     font-weight: bold;
+    margin:auto 1rem;
 }
 .info__column h2{
-    font-size: 14px;
+    font-size: 12px;
 }
 .info__column p{
     font-size: 10px;
     color: rgb(102, 20, 20);
+}
+
+.modal {
+  display: flex;
+  justify-content: center;align-content: center;
+  margin:auto;
+  flex-wrap: wrap;
+}
+.modal__header{
+    text-align: center;
+    margin-top: -1.4rem;
+    font-size: 2rem !important;
+    margin-bottom: 0;
+}
+.close__btn{
+margin: auto;
+width: 50%;
+padding: 5px;border-radius: 12px;
+outline: none;
+display: block;
+border: none;cursor: pointer;
+color:rgb(33, 107, 138);
+background-color: rgb(235, 233, 233);font-weight: bold;
+}
+.btn{
+    margin: auto;
+width: 30%;cursor: pointer;
+padding: 5px;border-radius: 0.5rem;
+outline: none;
+color:rgb(57, 57, 57);
+display: block;font-weight: 700;
+border: none;font-size: 1rem;
+margin-bottom: 2rem!important;
+background-color: rgb(154, 150, 150);
+}
+.close__btn:hover{
+    background-color: #fff;color: black;
 }
